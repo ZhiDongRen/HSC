@@ -1,2 +1,4 @@
-# ZREe
-语音处理
+# HSC
+
+hardware and software codesign
+
