@@ -1,0 +1,17 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="13" filename="fir_fixed.cpp" linenumber="8" name="tmp_2" contextFuncName="fir_fixed" moduleName="fir_fixed" rtlName="tmp_2_reg_252" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\doria\Desktop\HSCe_Project"><\/item>
+<item  id="20" filename="fir_fixed.cpp" linenumber="9" name="icmp_ln9" contextFuncName="fir_fixed" moduleName="fir_fixed" rtlName="icmp_ln9_fu_182_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\Users\doria\Desktop\HSCe_Project"><\/item>
+<item  id="23" filename="fir_fixed.cpp" linenumber="12" name="zext_ln12" contextFuncName="fir_fixed" moduleName="fir_fixed" rtlName="zext_ln12_fu_193_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\doria\Desktop\HSCe_Project"><\/item>
+<item  id="24" filename="fir_fixed.cpp" linenumber="12" name="add_ln12" contextFuncName="fir_fixed" moduleName="fir_fixed" rtlName="grp_fu_167_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\Users\doria\Desktop\HSCe_Project"><\/item>
+<item  id="25" filename="fir_fixed.cpp" linenumber="12" name="zext_ln12_1" contextFuncName="fir_fixed" moduleName="fir_fixed" rtlName="zext_ln12_1_fu_188_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\doria\Desktop\HSCe_Project"><\/item>
+<item  id="36" filename="fir_fixed.cpp" linenumber="8" name="i" contextFuncName="fir_fixed" moduleName="fir_fixed" rtlName="grp_fu_167_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\Users\doria\Desktop\HSCe_Project"><\/item>
+<item  id="43" filename="fir_fixed.cpp" linenumber="14" name="icmp_ln14" contextFuncName="fir_fixed" moduleName="fir_fixed" rtlName="icmp_ln14_fu_198_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\Users\doria\Desktop\HSCe_Project"><\/item>
+<item  id="45" filename="fir_fixed.cpp" linenumber="14" name="i_1" contextFuncName="fir_fixed" moduleName="fir_fixed" rtlName="i_1_fu_204_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\Users\doria\Desktop\HSCe_Project"><\/item>
+<item  id="51" filename="fir_fixed.cpp" linenumber="15" name="zext_ln15" contextFuncName="fir_fixed" moduleName="fir_fixed" rtlName="zext_ln15_fu_210_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\doria\Desktop\HSCe_Project"><\/item>
+<item  id="58" filename="fir_fixed.cpp" linenumber="15" name="r_V_2" contextFuncName="fir_fixed" moduleName="fir_fixed" rtlName="fir_fixed_mac_mulbkb_U1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\doria\Desktop\HSCe_Project"><\/item>
+<item  id="59" filename="fir_fixed.cpp" linenumber="15" name="lhs_V" contextFuncName="fir_fixed" moduleName="fir_fixed" rtlName="lhs_V_fu_216_p3" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\doria\Desktop\HSCe_Project"><\/item>
+<item  id="60" filename="fir_fixed.cpp" linenumber="15" name="ret_V" contextFuncName="fir_fixed" moduleName="fir_fixed" rtlName="fir_fixed_mac_mulbkb_U1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\doria\Desktop\HSCe_Project"><\/item>
+<item  id="61" filename="fir_fixed.cpp" linenumber="15" name="temp_V" contextFuncName="fir_fixed" moduleName="fir_fixed" rtlName="p_Val2_s_reg_143" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\doria\Desktop\HSCe_Project"><\/item>
+<\/annotationInfo>
+</annotationInfo>

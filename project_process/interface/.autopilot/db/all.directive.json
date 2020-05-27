@@ -1,0 +1,23 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "fir_fixed",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "ap_ovld",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "y",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        }]
+    }]}

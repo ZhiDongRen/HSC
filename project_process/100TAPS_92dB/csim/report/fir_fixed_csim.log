@@ -1,0 +1,11 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../tb_fir_fixed.cpp in debug mode
+   Compiling ../../../../fir_fixed.cpp in debug mode
+   Compiling ../../../../fir_double.cpp in debug mode
+   Generating csim.exe
+signal = 88.8382 dB
+noise = 0.00220914 dB
+SQNR = 92.0875 dB
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

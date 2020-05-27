@@ -1,0 +1,1330 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z007s-clg225-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fir_fixed.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fir_double.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:04 ; elapsed = 00:00:58 . Memory (MB): peak = 175.004 ; gain = 83.375
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:04 ; elapsed = 00:00:58 . Memory (MB): peak = 175.004 ; gain = 83.375
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:59 . Memory (MB): peak = 175.004 ; gain = 83.375
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:59 . Memory (MB): peak = 175.004 ; gain = 83.375
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT' (fir_fixed.cpp:9) in function 'fir_fixed' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'MAC' (fir_fixed.cpp:14) in function 'fir_fixed' partially with a factor of 2.
+WARNING: [XFORM 203-104] Completely partitioning array 'regs.V'  accessed through non-constant indices on dimension 1 (fir_fixed.cpp:15:13), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'regs.V'  in dimension 1 completely.
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.100i16P.i7' into 'fir_fixed' (fir_fixed.cpp:12).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:01:01 . Memory (MB): peak = 175.004 ; gain = 83.375
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:01:03 . Memory (MB): peak = 198.078 ; gain = 106.449
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_fixed' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 64.808 seconds; current allocated memory: 153.890 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.661 seconds; current allocated memory: 157.841 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/x_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/h_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/y_V' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_fixed' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'regs_V_98' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_99' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_31' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_33' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_35' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_37' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_39' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_41' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_43' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_45' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_47' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_49' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_51' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_53' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_55' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_57' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_59' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_61' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_63' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_65' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_67' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_69' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_71' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_73' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_75' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_77' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_79' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_81' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_83' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_85' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_87' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_89' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_91' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_93' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_95' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_97' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_32' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_34' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_36' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_38' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_40' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_42' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_44' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_46' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_48' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_50' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_52' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_54' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_56' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_58' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_60' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_62' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_64' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_66' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_68' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_70' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_72' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_74' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_76' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_78' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_80' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_82' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_84' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_86' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_88' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_90' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_92' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_94' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_96' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'fir_fixed_mux_1287_16_1_1' to 'fir_fixed_mux_128bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fir_fixed_mac_muladd_16s_16s_32ns_32_1_1' to 'fir_fixed_mac_mulcud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_fixed_mac_mulcud': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fir_fixed_mux_128bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_fixed'.
+INFO: [HLS 200-111]  Elapsed time: 7.649 seconds; current allocated memory: 161.967 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:21 ; elapsed = 00:01:34 . Memory (MB): peak = 242.625 ; gain = 150.996
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_fixed.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_fixed.
+INFO: [HLS 200-112] Total elapsed time: 94.351 seconds; peak allocated memory: 161.967 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z007s-clg225-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fir_fixed.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fir_double.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 175.402 ; gain = 83.723
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 175.402 ; gain = 83.723
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:52 . Memory (MB): peak = 175.402 ; gain = 83.723
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:52 . Memory (MB): peak = 175.402 ; gain = 83.723
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT' (fir_fixed.cpp:9) in function 'fir_fixed' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'MAC' (fir_fixed.cpp:14) in function 'fir_fixed' partially with a factor of 4.
+WARNING: [XFORM 203-104] Completely partitioning array 'regs.V'  accessed through non-constant indices on dimension 1 (fir_fixed.cpp:15:13), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'regs.V'  in dimension 1 completely.
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.100i16P.i7' into 'fir_fixed' (fir_fixed.cpp:12).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:54 . Memory (MB): peak = 175.402 ; gain = 83.723
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:56 . Memory (MB): peak = 198.695 ; gain = 107.016
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_fixed' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.4ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'fir_fixed' consists of the following:
+	'mul' operation of DSP[1521] ('mul_ln1118_1', fir_fixed.cpp:15) [1518]  (3.36 ns)
+	'add' operation of DSP[1521] ('add_ln1192_1', fir_fixed.cpp:15) [1521]  (3.02 ns)
+	'add' operation of DSP[1532] ('add_ln1192_2', fir_fixed.cpp:15) [1532]  (3.02 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 58.34 seconds; current allocated memory: 154.218 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 3.215 seconds; current allocated memory: 158.401 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/x_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/h_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/y_V' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_fixed' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'regs_V_96' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_97' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_98' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_99' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_31' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_35' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_39' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_43' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_47' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_51' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_55' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_59' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_63' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_67' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_71' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_75' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_79' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_83' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_87' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_91' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_95' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_34' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_38' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_42' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_46' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_50' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_54' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_58' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_62' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_66' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_70' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_74' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_78' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_82' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_86' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_90' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_94' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_33' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_37' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_41' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_45' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_49' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_53' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_57' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_61' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_65' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_69' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_73' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_77' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_81' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_85' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_89' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_93' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_32' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_36' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_40' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_44' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_48' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_52' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_56' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_60' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_64' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_68' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_72' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_76' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_80' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_84' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_88' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_92' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'fir_fixed_mux_1287_16_1_1' to 'fir_fixed_mux_128bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fir_fixed_mac_muladd_16s_16s_32ns_32_1_1' to 'fir_fixed_mac_mulcud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_fixed_mac_mulcud': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fir_fixed_mux_128bkb': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_fixed'.
+INFO: [HLS 200-111]  Elapsed time: 7.019 seconds; current allocated memory: 163.379 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:20 ; elapsed = 00:01:19 . Memory (MB): peak = 244.543 ; gain = 152.863
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_fixed.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_fixed.
+INFO: [HLS 200-112] Total elapsed time: 78.804 seconds; peak allocated memory: 163.379 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z007s-clg225-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fir_fixed.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fir_double.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:47 . Memory (MB): peak = 174.691 ; gain = 84.426
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:47 . Memory (MB): peak = 174.691 ; gain = 84.426
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:48 . Memory (MB): peak = 174.691 ; gain = 84.426
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:49 . Memory (MB): peak = 174.691 ; gain = 84.426
+INFO: [XFORM 203-501] Unrolling loop 'SHIFT' (fir_fixed.cpp:9) in function 'fir_fixed' partially with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'MAC' (fir_fixed.cpp:14) in function 'fir_fixed' partially with a factor of 4.
+WARNING: [XFORM 203-104] Completely partitioning array 'regs.V'  accessed through non-constant indices on dimension 1 (fir_fixed.cpp:15:13), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'regs.V'  in dimension 1 completely.
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.100i16P.i7' into 'fir_fixed' (fir_fixed.cpp:12).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.100i16P.i7' into 'fir_fixed' (fir_fixed.cpp:12).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.100i16P.i7' into 'fir_fixed' (fir_fixed.cpp:12).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:51 . Memory (MB): peak = 174.691 ; gain = 84.426
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:55 . Memory (MB): peak = 238.199 ; gain = 147.934
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_fixed' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.4ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'fir_fixed' consists of the following:
+	'mul' operation of DSP[2749] ('mul_ln1118_1', fir_fixed.cpp:15) [2746]  (3.36 ns)
+	'add' operation of DSP[2749] ('add_ln1192_1', fir_fixed.cpp:15) [2749]  (3.02 ns)
+	'add' operation of DSP[2760] ('add_ln1192_2', fir_fixed.cpp:15) [2760]  (3.02 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 72.357 seconds; current allocated memory: 176.382 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 6.662 seconds; current allocated memory: 184.939 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/x_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/h_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/y_V' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_fixed' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'regs_V_96' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_97' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_98' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_99' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_31' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_35' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_39' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_43' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_47' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_51' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_55' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_59' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_63' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_67' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_71' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_75' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_79' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_83' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_87' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_91' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_95' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_34' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_38' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_42' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_46' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_50' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_54' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_58' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_62' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_66' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_70' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_74' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_78' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_82' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_86' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_90' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_94' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_33' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_37' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_41' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_45' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_49' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_53' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_57' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_61' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_65' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_69' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_73' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_77' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_81' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_85' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_89' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_93' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_32' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_36' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_40' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_44' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_48' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_52' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_56' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_60' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_64' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_68' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_72' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_76' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_80' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_84' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_88' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_92' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'fir_fixed_mux_1287_16_1_1' to 'fir_fixed_mux_128bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fir_fixed_mac_muladd_16s_16s_32ns_32_1_1' to 'fir_fixed_mac_mulcud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_fixed_mac_mulcud': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fir_fixed_mux_128bkb': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_fixed'.
+INFO: [HLS 200-111]  Elapsed time: 13.343 seconds; current allocated memory: 194.303 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:53 ; elapsed = 00:01:47 . Memory (MB): peak = 297.141 ; gain = 206.875
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_fixed.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_fixed.
+INFO: [HLS 200-112] Total elapsed time: 107.323 seconds; peak allocated memory: 194.303 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z007s-clg225-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fir_fixed.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fir_double.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:45 . Memory (MB): peak = 175.941 ; gain = 84.793
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:45 . Memory (MB): peak = 175.941 ; gain = 84.793
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:47 . Memory (MB): peak = 175.941 ; gain = 84.793
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:47 . Memory (MB): peak = 175.941 ; gain = 84.793
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'fir_fixed' (fir_fixed.cpp:3).
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'SHIFT' (fir_fixed.cpp:9) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'MAC' (fir_fixed.cpp:14) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (fir_fixed.cpp:9) in function 'fir_fixed' completely with a factor of 100.
+INFO: [HLS 200-489] Unrolling loop 'MAC' (fir_fixed.cpp:14) in function 'fir_fixed' completely with a factor of 100.
+INFO: [XFORM 203-101] Partitioning array 'regs.V'  in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:48 . Memory (MB): peak = 175.941 ; gain = 84.793
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:49 . Memory (MB): peak = 175.941 ; gain = 84.793
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_fixed' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'fir_fixed'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('h_V_load_4', fir_fixed.cpp:15) on array 'h_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'h_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 50, Depth = 53.
+WARNING: [SCHED 204-21] Estimated clock period (9.4ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'fir_fixed' consists of the following:
+	'load' operation ('regs_V_0_load', fir_fixed.cpp:12) on static variable 'regs_V_0' [305]  (0 ns)
+	'mul' operation of DSP[320] ('mul_ln1118_1', fir_fixed.cpp:15) [317]  (3.36 ns)
+	'add' operation of DSP[320] ('add_ln1192', fir_fixed.cpp:15) [320]  (3.02 ns)
+	'add' operation of DSP[328] ('add_ln1192_1', fir_fixed.cpp:15) [328]  (3.02 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 52.006 seconds; current allocated memory: 111.227 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.181 seconds; current allocated memory: 114.114 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/x_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/h_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/y_V' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_fixed' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'regs_V_98' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_97' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_96' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_95' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_94' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_93' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_92' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_91' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_90' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_89' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_88' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_87' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_86' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_85' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_84' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_83' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_82' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_81' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_80' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_79' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_78' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_77' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_76' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_75' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_74' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_73' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_72' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_71' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_70' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_69' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_68' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_67' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_66' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_65' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_64' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_63' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_62' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_61' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_60' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_59' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_58' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_57' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_56' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_55' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_54' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_53' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_52' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_51' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_50' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_49' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_48' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_47' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_46' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_45' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_44' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_43' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_42' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_41' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_40' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_39' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_38' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_37' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_36' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_35' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_34' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_33' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_32' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_31' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_0' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'fir_fixed_mul_mul_16s_16s_32_1_1' to 'fir_fixed_mul_mulbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fir_fixed_mac_muladd_16s_16s_32ns_32_1_1' to 'fir_fixed_mac_mulcud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_fixed_mac_mulcud': 99 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fir_fixed_mul_mulbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_fixed'.
+INFO: [HLS 200-111]  Elapsed time: 3.588 seconds; current allocated memory: 120.335 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:12 ; elapsed = 00:01:03 . Memory (MB): peak = 193.250 ; gain = 102.102
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_fixed.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_fixed.
+INFO: [HLS 200-112] Total elapsed time: 62.855 seconds; peak allocated memory: 120.335 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z007s-clg225-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z007s-clg225-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z007s-clg225-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fir_fixed.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fir_double.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:47 . Memory (MB): peak = 174.957 ; gain = 83.328
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:47 . Memory (MB): peak = 174.957 ; gain = 83.328
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:49 . Memory (MB): peak = 174.957 ; gain = 83.328
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:49 . Memory (MB): peak = 174.957 ; gain = 83.328
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'fir_fixed' (fir_fixed.cpp:3).
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'SHIFT' (fir_fixed.cpp:9) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'MAC' (fir_fixed.cpp:14) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (fir_fixed.cpp:9) in function 'fir_fixed' completely with a factor of 100.
+INFO: [HLS 200-489] Unrolling loop 'MAC' (fir_fixed.cpp:14) in function 'fir_fixed' completely with a factor of 100.
+INFO: [XFORM 203-101] Partitioning array 'regs.V'  in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:50 . Memory (MB): peak = 174.957 ; gain = 83.328
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:51 . Memory (MB): peak = 174.957 ; gain = 83.328
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_fixed' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'fir_fixed'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('h_V_load_4', fir_fixed.cpp:15) on array 'h_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'h_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 50, Depth = 53.
+WARNING: [SCHED 204-21] Estimated clock period (9.4ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'fir_fixed' consists of the following:
+	'load' operation ('regs_V_0_load', fir_fixed.cpp:12) on static variable 'regs_V_0' [305]  (0 ns)
+	'mul' operation of DSP[320] ('mul_ln1118_1', fir_fixed.cpp:15) [317]  (3.36 ns)
+	'add' operation of DSP[320] ('add_ln1192', fir_fixed.cpp:15) [320]  (3.02 ns)
+	'add' operation of DSP[328] ('add_ln1192_1', fir_fixed.cpp:15) [328]  (3.02 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 53.987 seconds; current allocated memory: 111.227 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.541 seconds; current allocated memory: 114.114 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/x_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/h_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/y_V' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_fixed' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'regs_V_98' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_97' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_96' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_95' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_94' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_93' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_92' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_91' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_90' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_89' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_88' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_87' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_86' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_85' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_84' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_83' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_82' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_81' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_80' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_79' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_78' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_77' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_76' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_75' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_74' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_73' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_72' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_71' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_70' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_69' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_68' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_67' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_66' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_65' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_64' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_63' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_62' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_61' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_60' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_59' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_58' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_57' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_56' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_55' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_54' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_53' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_52' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_51' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_50' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_49' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_48' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_47' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_46' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_45' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_44' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_43' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_42' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_41' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_40' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_39' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_38' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_37' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_36' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_35' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_34' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_33' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_32' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_31' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_0' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'fir_fixed_mul_mul_16s_16s_32_1_1' to 'fir_fixed_mul_mulbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fir_fixed_mac_muladd_16s_16s_32ns_32_1_1' to 'fir_fixed_mac_mulcud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_fixed_mac_mulcud': 99 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fir_fixed_mul_mulbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_fixed'.
+INFO: [HLS 200-111]  Elapsed time: 4.148 seconds; current allocated memory: 120.332 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:13 ; elapsed = 00:01:06 . Memory (MB): peak = 193.355 ; gain = 101.727
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_fixed.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_fixed.
+INFO: [HLS 200-112] Total elapsed time: 66.085 seconds; peak allocated memory: 120.332 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z007s-clg225-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z007s-clg225-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fir_fixed.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fir_double.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:54 . Memory (MB): peak = 175.480 ; gain = 83.711
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:54 . Memory (MB): peak = 175.480 ; gain = 83.711
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:55 . Memory (MB): peak = 175.480 ; gain = 83.711
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:55 . Memory (MB): peak = 175.480 ; gain = 83.711
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'fir_fixed' (fir_fixed.cpp:3).
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'SHIFT' (fir_fixed.cpp:9) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'MAC' (fir_fixed.cpp:14) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (fir_fixed.cpp:9) in function 'fir_fixed' completely with a factor of 100.
+INFO: [HLS 200-489] Unrolling loop 'MAC' (fir_fixed.cpp:14) in function 'fir_fixed' completely with a factor of 100.
+INFO: [XFORM 203-101] Partitioning array 'regs.V'  in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:57 . Memory (MB): peak = 175.480 ; gain = 83.711
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:58 . Memory (MB): peak = 175.480 ; gain = 83.711
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_fixed' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'fir_fixed'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('h_V_load_2', fir_fixed.cpp:15) on array 'h_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'h_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 50, Depth = 53.
+WARNING: [SCHED 204-21] Estimated clock period (9.4ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'fir_fixed' consists of the following:
+	'load' operation ('regs_V_0_load', fir_fixed.cpp:12) on static variable 'regs_V_0' [305]  (0 ns)
+	'mul' operation of DSP[320] ('mul_ln1118_1', fir_fixed.cpp:15) [317]  (3.36 ns)
+	'add' operation of DSP[320] ('add_ln1192', fir_fixed.cpp:15) [320]  (3.02 ns)
+	'add' operation of DSP[328] ('add_ln1192_1', fir_fixed.cpp:15) [328]  (3.02 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 60.166 seconds; current allocated memory: 111.240 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.525 seconds; current allocated memory: 114.126 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/x_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/h_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/y_V' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_fixed' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'regs_V_98' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_97' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_96' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_95' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_94' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_93' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_92' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_91' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_90' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_89' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_88' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_87' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_86' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_85' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_84' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_83' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_82' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_81' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_80' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_79' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_78' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_77' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_76' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_75' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_74' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_73' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_72' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_71' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_70' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_69' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_68' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_67' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_66' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_65' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_64' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_63' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_62' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_61' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_60' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_59' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_58' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_57' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_56' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_55' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_54' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_53' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_52' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_51' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_50' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_49' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_48' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_47' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_46' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_45' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_44' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_43' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_42' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_41' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_40' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_39' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_38' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_37' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_36' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_35' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_34' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_33' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_32' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_31' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_0' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'fir_fixed_mul_mul_16s_16s_32_1_1' to 'fir_fixed_mul_mulbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fir_fixed_mac_muladd_16s_16s_32ns_32_1_1' to 'fir_fixed_mac_mulcud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_fixed_mac_mulcud': 99 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fir_fixed_mul_mulbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_fixed'.
+INFO: [HLS 200-111]  Elapsed time: 5.027 seconds; current allocated memory: 120.332 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:14 ; elapsed = 00:01:17 . Memory (MB): peak = 192.836 ; gain = 101.066
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_fixed.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_fixed.
+INFO: [HLS 200-112] Total elapsed time: 77.519 seconds; peak allocated memory: 120.332 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z007s-clg225-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fir_fixed.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fir_double.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:57 . Memory (MB): peak = 175.957 ; gain = 84.316
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:57 . Memory (MB): peak = 175.957 ; gain = 84.316
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:58 . Memory (MB): peak = 175.957 ; gain = 84.316
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:58 . Memory (MB): peak = 175.957 ; gain = 84.316
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'fir_fixed' (fir_fixed.cpp:3).
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'SHIFT' (fir_fixed.cpp:9) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'MAC' (fir_fixed.cpp:14) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (fir_fixed.cpp:9) in function 'fir_fixed' completely with a factor of 100.
+INFO: [HLS 200-489] Unrolling loop 'MAC' (fir_fixed.cpp:14) in function 'fir_fixed' completely with a factor of 100.
+INFO: [XFORM 203-101] Partitioning array 'regs.V'  in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:59 . Memory (MB): peak = 175.957 ; gain = 84.316
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:01:01 . Memory (MB): peak = 175.957 ; gain = 84.316
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_fixed' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'fir_fixed'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('h_V_load_2', fir_fixed.cpp:15) on array 'h_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'h_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 50, Depth = 53.
+WARNING: [SCHED 204-21] Estimated clock period (9.4ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'fir_fixed' consists of the following:
+	'load' operation ('regs_V_0_load', fir_fixed.cpp:12) on static variable 'regs_V_0' [305]  (0 ns)
+	'mul' operation of DSP[320] ('mul_ln1118_1', fir_fixed.cpp:15) [317]  (3.36 ns)
+	'add' operation of DSP[320] ('add_ln1192', fir_fixed.cpp:15) [320]  (3.02 ns)
+	'add' operation of DSP[328] ('add_ln1192_1', fir_fixed.cpp:15) [328]  (3.02 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 62.923 seconds; current allocated memory: 111.240 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.424 seconds; current allocated memory: 114.126 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/x_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/h_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/y_V' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_fixed' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'regs_V_98' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_97' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_96' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_95' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_94' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_93' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_92' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_91' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_90' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_89' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_88' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_87' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_86' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_85' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_84' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_83' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_82' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_81' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_80' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_79' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_78' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_77' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_76' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_75' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_74' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_73' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_72' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_71' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_70' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_69' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_68' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_67' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_66' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_65' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_64' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_63' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_62' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_61' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_60' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_59' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_58' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_57' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_56' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_55' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_54' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_53' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_52' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_51' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_50' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_49' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_48' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_47' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_46' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_45' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_44' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_43' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_42' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_41' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_40' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_39' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_38' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_37' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_36' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_35' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_34' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_33' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_32' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_31' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_0' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'fir_fixed_mul_mul_16s_16s_32_1_1' to 'fir_fixed_mul_mulbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fir_fixed_mac_muladd_16s_16s_32ns_32_1_1' to 'fir_fixed_mac_mulcud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_fixed_mac_mulcud': 99 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fir_fixed_mul_mulbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_fixed'.
+INFO: [HLS 200-111]  Elapsed time: 3.975 seconds; current allocated memory: 120.332 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:12 ; elapsed = 00:01:14 . Memory (MB): peak = 193.160 ; gain = 101.520
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_fixed.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_fixed.
+INFO: [HLS 200-112] Total elapsed time: 74.571 seconds; peak allocated memory: 120.332 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z007s-clg225-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fir_fixed.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fir_double.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:58 . Memory (MB): peak = 175.188 ; gain = 83.559
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:58 . Memory (MB): peak = 175.188 ; gain = 83.559
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:01:00 . Memory (MB): peak = 175.188 ; gain = 83.559
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:01:00 . Memory (MB): peak = 175.188 ; gain = 83.559
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'fir_fixed' (fir_fixed.cpp:3).
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'SHIFT' (fir_fixed.cpp:9) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'MAC' (fir_fixed.cpp:14) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (fir_fixed.cpp:9) in function 'fir_fixed' completely with a factor of 100.
+INFO: [HLS 200-489] Unrolling loop 'MAC' (fir_fixed.cpp:14) in function 'fir_fixed' completely with a factor of 100.
+INFO: [XFORM 203-101] Partitioning array 'regs.V'  in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:01:01 . Memory (MB): peak = 175.188 ; gain = 83.559
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:01:03 . Memory (MB): peak = 175.188 ; gain = 83.559
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_fixed' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'fir_fixed'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('h_V_load_2', fir_fixed.cpp:15) on array 'h_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'h_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 50, Depth = 53.
+WARNING: [SCHED 204-21] Estimated clock period (9.4ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'fir_fixed' consists of the following:
+	'load' operation ('regs_V_0_load', fir_fixed.cpp:12) on static variable 'regs_V_0' [305]  (0 ns)
+	'mul' operation of DSP[320] ('mul_ln1118_1', fir_fixed.cpp:15) [317]  (3.36 ns)
+	'add' operation of DSP[320] ('add_ln1192', fir_fixed.cpp:15) [320]  (3.02 ns)
+	'add' operation of DSP[328] ('add_ln1192_1', fir_fixed.cpp:15) [328]  (3.02 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 64.756 seconds; current allocated memory: 111.224 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.567 seconds; current allocated memory: 114.111 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/x_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/h_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_fixed/y_V' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_fixed' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'regs_V_98' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_97' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_96' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_95' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_94' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_93' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_92' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_91' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_90' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_89' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_88' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_87' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_86' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_85' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_84' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_83' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_82' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_81' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_80' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_79' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_78' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_77' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_76' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_75' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_74' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_73' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_72' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_71' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_70' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_69' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_68' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_67' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_66' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_65' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_64' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_63' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_62' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_61' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_60' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_59' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_58' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_57' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_56' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_55' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_54' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_53' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_52' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_51' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_50' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_49' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_48' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_47' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_46' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_45' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_44' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_43' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_42' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_41' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_40' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_39' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_38' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_37' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_36' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_35' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_34' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_33' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_32' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_31' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_V_0' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'fir_fixed_mul_mul_16s_16s_32_1_1' to 'fir_fixed_mul_mulbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fir_fixed_mac_muladd_16s_16s_32ns_32_1_1' to 'fir_fixed_mac_mulcud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_fixed_mac_mulcud': 99 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fir_fixed_mul_mulbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_fixed'.
+INFO: [HLS 200-111]  Elapsed time: 4.326 seconds; current allocated memory: 120.332 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:13 ; elapsed = 00:01:17 . Memory (MB): peak = 193.781 ; gain = 102.152
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_fixed.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_fixed.
+INFO: [HLS 200-112] Total elapsed time: 77.61 seconds; peak allocated memory: 120.332 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================

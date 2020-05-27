@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fir_fixed.cpp" path="C:\Users\doria\Desktop\HSCe_Project\fir_fixed.cpp"/>
+    <originFiles name="fir_filter.h" path="C:\Users\doria\Desktop\HSCe_Project\fir_filter.h"/>
+    <originFiles name="fir_double.cpp" path="C:\Users\doria\Desktop\HSCe_Project\fir_double.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="tb_fir_fixed.cpp" path="C:\Users\doria\Desktop\HSCe_Project\tb_fir_fixed.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

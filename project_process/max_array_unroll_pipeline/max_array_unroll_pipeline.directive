@@ -1,0 +1,32 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="fir_fixed" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="regs" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="fir_fixed" label="SHIFT" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="fir_fixed" label="SHIFT" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="fir_fixed" label="MAC" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="fir_fixed" label="MAC" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="2"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+
